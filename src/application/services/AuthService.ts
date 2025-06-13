@@ -24,10 +24,12 @@ export class AuthService {
     const hashed = hashPassword(input.password)
 
     // Garantir que isAdmin tenha um valor padrão
-    const userData = {
-      ...input,
+    const userData: Omit<User, 'id' | 'createdAt' | 'updatedAt'> = {
+      name: input.name,
+      email: input.email,
       password: hashed,
-      isAdmin: input.isAdmin ?? false, // Se undefined, usar false
+      profilePicture: input.profilePicture,
+      isAdmin: input.isAdmin ?? false,
     }
 
     const u = await this.repo.create(userData)
@@ -62,7 +64,7 @@ export class AuthService {
 
   async updateUser(
     userId: string,
-    data: Partial<Omit<User, 'id' | 'createdAt'>>
+    data: Partial<Omit<User, 'id' | 'createdAt' | 'updatedAt'>>
   ) {
     if (data.password) {
       data.password = hashPassword(data.password as string)
