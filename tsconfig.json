@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "baseUrl": "src",
+    // "paths": {
+    //   "@controllers/*": [
+    //     "controllers/*"
+    //   ],
+    //   "@models/*": [
+    //     "models/*"
+    //   ],
+    //   "@application/*": [
+    //     "application/*"
+    //   ]
+    // }
+  }
+}
