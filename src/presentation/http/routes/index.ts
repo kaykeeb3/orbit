@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import { AdminController } from '../controllers/AdminController'
 import { AuthController } from '../controllers/AuthController'
+import { AdminController } from '../controllers/AdminController'
 import { authenticateToken, isAdmin } from '../middlewares/authMiddleware'
 
 const router = Router()
