@@ -29,6 +29,7 @@ describe('UserRepository', () => {
       profilePicture: 'pic.jpg',
       isAdmin: false,
       createdAt: new Date(),
+      updatedAt: new Date(),
     }
 
     ;(prisma.user.create as jest.Mock).mockResolvedValue(mockUser)
@@ -72,6 +73,7 @@ describe('UserRepository', () => {
       profilePicture: 'pic.jpg',
       isAdmin: false,
       createdAt: new Date(),
+      updatedAt: new Date(),
     }
 
     ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(mockUser)
@@ -102,6 +104,7 @@ describe('UserRepository', () => {
       profilePicture: 'pic.jpg',
       isAdmin: false,
       createdAt: new Date(),
+      updatedAt: new Date(),
     }
 
     ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(mockUser)
@@ -133,6 +136,7 @@ describe('UserRepository', () => {
         profilePicture: 'pic1.jpg',
         isAdmin: false,
         createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         id: '2',
@@ -142,6 +146,7 @@ describe('UserRepository', () => {
         profilePicture: 'pic2.jpg',
         isAdmin: true,
         createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ]
 
@@ -162,6 +167,7 @@ describe('UserRepository', () => {
       profilePicture: 'pic.jpg',
       isAdmin: false,
       createdAt: new Date(),
+      updatedAt: new Date(),
     }
 
     ;(prisma.user.update as jest.Mock).mockResolvedValue(mockUser)

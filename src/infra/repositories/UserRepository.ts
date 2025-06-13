@@ -3,7 +3,9 @@ import { User } from '../../domain/entities/User'
 import { prisma } from '../prisma/PrismaClient'
 
 export class UserRepository implements IUserRepository {
-  async create(data: Omit<User, 'id' | 'createdAt'>): Promise<User> {
+  async create(
+    data: Omit<User, 'id' | 'createdAt' | 'updatedAt'>
+  ): Promise<User> {
     const u = await prisma.user.create({ data })
     return new User(
       u.id,
@@ -12,7 +14,8 @@ export class UserRepository implements IUserRepository {
       u.password,
       u.profilePicture,
       u.isAdmin,
-      u.createdAt
+      u.createdAt,
+      u.updatedAt
     )
   }
 
@@ -26,7 +29,8 @@ export class UserRepository implements IUserRepository {
           u.password,
           u.profilePicture,
           u.isAdmin,
-          u.createdAt
+          u.createdAt,
+          u.updatedAt
         )
       : null
   }
@@ -41,7 +45,8 @@ export class UserRepository implements IUserRepository {
           u.password,
           u.profilePicture,
           u.isAdmin,
-          u.createdAt
+          u.createdAt,
+          u.updatedAt
         )
       : null
   }
@@ -57,14 +62,15 @@ export class UserRepository implements IUserRepository {
           u.password,
           u.profilePicture,
           u.isAdmin,
-          u.createdAt
+          u.createdAt,
+          u.updatedAt
         )
     )
   }
 
   async update(
     id: string,
-    data: Partial<Omit<User, 'id' | 'createdAt'>>
+    data: Partial<Omit<User, 'id' | 'createdAt' | 'updatedAt'>>
   ): Promise<User> {
     const u = await prisma.user.update({ where: { id }, data })
     return new User(
@@ -74,7 +80,8 @@ export class UserRepository implements IUserRepository {
       u.password,
       u.profilePicture,
       u.isAdmin,
-      u.createdAt
+      u.createdAt,
+      u.updatedAt
     )
   }
 
