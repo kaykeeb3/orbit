@@ -6,6 +6,7 @@ export class User {
     public password: string,
     public profilePicture?: string | null,
     public isAdmin = false,
-    public createdAt = new Date()
+    public createdAt = new Date(),
+    public updatedAt = new Date()
   ) {}
 }
