@@ -22,6 +22,7 @@
     "zod": "^3.25.63"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/bcryptjs": "^3.0.0",
     "@types/cors": "^2.8.19",
