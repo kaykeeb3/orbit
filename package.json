@@ -25,7 +25,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@rocketseat/eslint-config": "^2.2.2",
     "@types/bcryptjs": "^3.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
@@ -33,7 +32,6 @@
     "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^24.0.1",
     "@types/supertest": "^6.0.3",
-    "eslint": "^9.28.0",
     "jest": "^30.0.0",
     "prisma": "^6.9.0",
     "supertest": "^7.1.1",
