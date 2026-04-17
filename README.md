@@ -1,3 +1,3 @@
 # Orbit
 
-Orbit is a basic user microservice crafted with Node.js, TypeScript, and Prisma.
+Orbit é um microsserviço básico para usuários, desenvolvido com Node.js, TypeScript e Prisma.
